@@ -2,7 +2,7 @@ import express from 'express';
 import fetch from 'node-fetch';
 
 const app = express()
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 
 const websiteUrl = 'https://cpblog.onrender.com/'; 
 const interval = 15 * 60 * 1000; 
