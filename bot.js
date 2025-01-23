@@ -1,4 +1,8 @@
+import express from 'express';
 import fetch from 'node-fetch';
+
+const app = express()
+const port = 3000 || process.env.PORT;
 
 const websiteUrl = 'https://cpblog.onrender.com/'; 
 const interval = 15 * 60 * 1000; 
@@ -16,3 +20,7 @@ async function wakeUp() {
 }
 wakeUp();
 setInterval(wakeUp, interval);
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})
